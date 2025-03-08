@@ -42,8 +42,8 @@ pipeline {
                         ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
                         # Clone the repository and update the image tag
-                        git clone git@github.com:vedantsharmascaler/html-demo-app.git
-                        cd html-demo-app
+                        git clone git@github.com:vedantsharmascaler/html-deployment.git
+                        cd html-deployment
 
                         # Use sed to update the newTag in kustomization.yaml
                         sed -i '/name: vedant120\\/html-app/{n;s/newTag: .*/newTag: ${params.VERSION}/}' kustomization.yaml
