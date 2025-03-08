@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'VERSION', defaultValue: 'v2', description: 'Docker image version')
+        string(name: 'VERSION', defaultValue: 'latest', description: 'Docker image version')
     }
     environment {
         SSH_KEY_CREDENTIALS = 'git-ssh-credentials' // Jenkins SSH key credential ID for Git
